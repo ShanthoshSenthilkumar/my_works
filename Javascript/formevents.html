@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Events</title>
+</head>
+<body>
+    <!-- onsubmit -->
+    <form id="myform" onsubmit="submithandler()">
+        <input type="text" id="name" placeholder="Enter your name">
+        <input type="submit" value="Submit"><br><br>
+
+        <!-- onchange -->
+         <input type="text" placeholder="Enter the 1st number" id="num1">
+         <input type="text" placeholder="Enter the 2nd number" id="num2" onchange="index()">
+         <input type="text" id="result">
+         <select name="" id="fruits" onchange="show()">
+            <option value="apple">Apple</option>
+            <option value="orange">Orange</option>
+            <option value="strawberry">Strawberry</option>
+         </select><br><br>
+
+         <!-- onfocus & onblur -->
+          <input type="text" onfocus="demo()" id="item1">
+          <input type="text" onblur="vento()" id="output">
+
+
+    </form>
+    <div id="resume"></div>
+    <div id="res"></div>
+    <script>
+        // onsubmit
+        function submithandler(){
+            const name=document.getElementById("name").value 
+            alert(name)
+            // document.getElementById("res").innerHTML=name
+        }
+
+        // onchange
+        function index(){
+            let a=document.getElementById("num1").value 
+            let b=document.getElementById("num2").value 
+            result.value=parseInt(a)+parseInt(b)
+        }
+        function show(){
+            var z=document.getElementById("fruits").value 
+            document.getElementById("resume").innerHTML=z
+        }
+
+        //onfocus & onblur
+        function demo(){
+            //var a=document.getElementById("output").value
+            item1.style.background="red"
+        }
+        function vento(){
+            output.style.background="blue"
+        }
+    </script>
+</body>
+
+</html>

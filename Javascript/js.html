@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datatypes</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+        //Primitive
+        //1. number - integer, float
+        let number = 25; //integer
+        let price = 10.11; //floating point
+
+        //2. string
+        let name = "Vijay"; //double quotes
+        let city = 'New York'; //single quotes
+        let greeting = `Hello, ${name, city}!`; //Template literal (backsticks)
+
+        //3.Boolean - logical entity
+        let isStudent = false;
+        let isEmploye = true;
+
+        //4.undefined - declared but not assign a value
+        let x;
+        console.log(x); //output: undefined
+
+        //5. null - absence of value
+        let y=null;
+        console.log(x); //null
+
+        //6. Bigint -  maximum upto 2^53-1
+
+        // Non Primitive
+        //1. Object
+        let person = {
+            name:"Vijay", age:49, isEmployed: true
+        };
+        console.log(person.name); //output:Vijay
+
+        //2.Array
+        let colors = ["red","green","white"];
+        console.log(colors[0]); //output:red
+
+        //special datatype
+        //1.NaN 
+        let value = 0/0;
+        console.log(value); //output:NaN
+        
+        //2.Infinity
+        //Dividing any number with 0 results in infinity
+
+        //Operators
+        //1.Artithmetic Operators (+,-,*,/,%)
+        let a = 5;
+        let b = 2;
+        console.log(a+b); //7
+        console.log(a-b); //3
+        console.log(a*b); //10
+        console.log(a/b); //2.5
+        console.log(a%b); //1
+
+        //String Concatenation
+        let name1 = "MSD"
+        let profession = "Cricketer"
+        let result = name1 + profession
+        console.log(result) 
+
+        //Assignment Operator(=,+=,-=,*=,/=,%=,**=)
+        let z =10
+        z +=5 //z=z+5-->15
+        console.log(z); //15
+
+        //Comparision or Relational Operator
+        console.log (5 == "5");  //true
+        console.log(5==="5"); //false
+        console.log(5>10);
+        
+        //Logical Operator(&&,  ||)
+        let isHuman = true;
+        let isAnimal = false;
+        console.log(isHuman && isAnimal); //false
+        console.log(isHuman || isAnimal); //true
+        console.log(!isHuman); //false
+
+        //Ternary Operator (?:)
+        let age = 20;
+        let status = (age>=18) ? "Adult":"Minor";
+        console.log(status); //"Adult"
+
+        //Bitwise operator
+        console.log(5&1); //1
+        console.log(5|1); //5
+
+        //typeof -> to check what datatype is (for primitive datatype)
+        console.log(typeof "hello"); //"string" or
+
+        a="world"
+        console.log(typeof a); //string
+
+        //instanceof(for non primitive datatype)
+        console.log(arr instanceof Array);//output:true
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- //Keyevents--keyboard events -->
+     <!-- onkeydown
+     onkeyup -->
+     <input type="text" onkeydown="down()" id="num1" onkeyup="up()">
+     
+</body>
+<script>
+    function down(){
+        num1.style.background="blue"
+    }
+    function up(){
+        var num=document.getElementById("num1")
+        num.style.background="red"
+        num.value=num.value.toUpperCase();
+
+    }
+ </script>
+</html>

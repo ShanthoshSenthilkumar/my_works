@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validations</title>
+</head>
+<body>
+    <table class="sample">
+        <tr>
+            <td>Username:</td>
+            <td><input type="text" placeholder="username" id="username" onchange="user()"></td><br>
+            
+        </tr> 
+        <tr>
+            <td><p id="userError" style="color:red"></p></td>
+        </tr>
+        <tr>
+            <td>Email:</td>
+            <td><input type="text" required placeholder="abcd@gmail.com" id="email" onchange="mail()"></td><br>
+            
+        </tr>
+        <tr>
+            <td><p id="emailError" style="color:red"></p></td>
+        </tr>
+        <tr>
+            <td><label for="Password">Password:</label></td>
+            <td><input type="password" id="pswrd" onchange="pswrd()"></td><br>
+            <td><p id="pswrdError" style="color:red"></p></td><br>
+            <td><p id="pswrdError1" style="color:green"></p> </td>
+        </tr>
+        
+        <!-- <tr>
+            <td>DOB:</td>
+            <td><input type="date" onchange="dob()" id="date"></td>  
+
+        </tr> -->
+        <tr>
+            <td>Mobile no:</td>
+            <td><input type="tel" name="" pattern="[0-9]{5}[0-9]{}" placeholder="12345 67890" onchange="number()" id="num"></td><br>
+            <td><p id="numError" style="color:red"></p></td>
+        </tr>
+        
+    </table><br>
+    <div id="result"></div>
+    <script>
+        
+    function user(){
+            let a=document.getElementById("username").value.trim()
+            let b=document.getElementById("userError").value
+            let c=/^[a-zA-Z0-9_]{3,15}$/
+
+            if(!a){
+                userError.innerHTML="Name cannot be empty"
+            }else if(!c.test(a)){
+                userError.innerHTML="Name must contain only alphabets"
+            }else{
+                userError.innerHTML=""
+            
+        }
+    }
+    function pswrd(){
+            let password=document.getElementById("pswrd").value.trim()
+            let errorpswrd=document.getElementById("pswrdError").value
+            let pswrd1=/^(?=.*[\W_]).{8,}$/
+
+            if(!password){
+                pswrdError.innerHTML="Password cannot be empty"
+            }else if(password.length<8){
+                pswrdError.innerHTML="Password must be atleast 8 characters"
+            }else if(!pswrd1.test(password)){
+                pswrdError.innerHTML="Your password must be in the combination of one special characters and one alphanumeric"
+            }else{
+                pswrdError1.innerHTML="Strong Password"
+            }
+    }
+
+    function mail(){
+        let email=document.getElementById("email").value.trim()
+        let valid=document.getElementById("emailError").value
+        let mailvalidate=/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
+
+        if(!email){
+            emailError.innerHTML="Email cannot be empty"
+        }else if(!mailvalidate.test(email)){
+            emailError.innerHTML="Invalid Email"
+        }else{
+            emailError.innerHTML=""
+        }
+    }
+
+    function number(){
+        let mobile=document.getElementById("num").value.trim()
+        let number=document.getElementById("numError").value
+        let validatenumber=/^\d{10}$/
+
+        if(!mobile){
+            numError.innerHTML="Contact number cannot be empty"
+        }else if(!validatenumber.test(mobile)){
+            numError.innerHTML="Enter proper contact number"
+        }else{
+            numError.innerHTML=""
+        }
+    }
+    </script>
+</body>
+</html>

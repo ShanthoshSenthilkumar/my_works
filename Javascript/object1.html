@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //object is unordered
+        let p={name:"Dhoni" , age:"38"}
+        console.log(p.name)
+        console.log(p.age)
+        console.log(p["age"])
+
+        //add new value
+        p.job="Cricketer"
+        console.log(p.job)
+        console.log(p)
+
+        //for update the values
+        p.age="40"
+        console.log(p.age)
+
+        //for loop to print object
+        for(let i in p){
+            console.log(i+":"+p[i])
+        }
+
+        //delete
+        delete p.age
+        console.log(p)
+    </script>
+</body>
+</html>

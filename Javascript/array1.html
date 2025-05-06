@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Billing</title>
+    <style>
+        * {
+            margin: 10px 10px;
+            padding: 10px 10px;
+        }
+        .inputsection {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .entrysection {
+            width: 100%;
+        }
+        .border, .border1, th {
+            border: 1px solid #100b0b;
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <center><h1>Billing</h1></center>
+    <div>
+        <table class="entrysection">
+            <tr>
+                <td>Product:</td>
+                <td><input type="text" id="pro"></td>
+                <td>Quantity:</td>
+                <td><input type="number" id="qua" value="1"></td>
+                <td>Price:</td>
+                <td><input type="number" id="price" value="0"></td>
+                <td><button class="btn btn-outline-primary" onclick="add()">Add</button></td>
+            </tr>
+            <tr>
+                <td>Index:</td>
+                <td><input type="number" id="index"></td>
+                <td>New Product:</td>
+                <td><input type="text" id="new"></td>
+                <td>Quantity:</td>
+                <td><input type="number" id="quantity" value="1"></td>
+                <td>Price:</td>
+                <td><input type="number" id="rate" value="0"></td>
+                <td><button class="btn btn-success" onclick="update()">Update</button></td>
+                <td><button class="btn btn-danger" onclick="del()">Delete</button></td>
+            </tr>
+        </table>
+    </div><br><hr>
+    <div id="productTable">
+        <table class="inputsection" id="tableinput">
+            <thead>
+                <tr class="border">
+                    <th>PRODUCT</th>
+                    <th>QUANTITY</th>
+                    <th>PRICE</th>
+                    <th>TOTAL</th>
+                    <th>ACTION</th>
+                </tr>
+            </thead>
+            <tbody id="viewproduct"></tbody>
+            <tfoot>
+                <tr class="border1">
+                    <td id="product"></td>
+                    <td id="quantity1"></td>
+                    <td id="rate1"></td><br>
+                    <td colspan="3" style="text-align: right;">Grand Total</td>
+                    <td id="grandtotal">0</td>
+                    <td></td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <div id="result"></div>
+    <script>
+        let products = []
+        function add() {
+            let product = document.getElementById("pro").value
+            let quantity = parseInt(document.getElementById("qua").value)
+            let price = parseFloat(document.getElementById("price").value)
+            let total = quantity * price
+            // let value=document.getElementById("viewproduct")
+            products.push(product)
+            products.push(quantity)
+            products.push(price)
+            console.log(products)
+            document.getElementById("product").innerHTML=product
+            document.getElementById("quantity1").innerHTML=quantity
+            document.getElementById("rate1").innerHTML=price
+            // displayProducts()
+            // document.getElementById("tableinput").innerHTML=products
+            // document.getElementById("viewproduct").innerHTML=value
+        }
+        function update() {
+            let index = parseInt(document.getElementById("index").value)
+            products[index].product = document.getElementById("new").value
+            products[index].quantity = parseInt(document.getElementById("quantity").value)
+            products[index].price = parseFloat(document.getElementById("rate").value)
+            products[index].total = products[index].quantity * products[index].price
+            
+            // displayProducts()
+            // document.getElementById("tableinput").innerHTML=index
+        }
+        function del() {
+            let index = parseInt(document.getElementById("index").value)
+            products.splice(index, 1)
+            // displayProducts()
+        }
+        // function displayProducts(){
+
+        // }
+                
+    </script>
+</body>
+</html>

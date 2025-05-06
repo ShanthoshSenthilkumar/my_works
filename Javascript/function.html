@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <title>State Electricity</title>
+    <style>
+        *{
+            margin:10px 10px;
+            padding:10px 10px;
+        }
+        nav{
+            background-color:#2f3c7e;
+            padding:10px 10px;
+            margin:0px 10px;
+            color:#fbeaeb;
+        }
+        body{
+            background-color:#fbeaeb;
+            color:#2f3c7e;
+        }
+        .entrysection{
+            font-size: x-large;
+            font-weight: 600;
+        }
+        .button{
+            margin:4% 4%;
+            padding:20px 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+    <center><h1>EB Bill</h1></center>
+   </nav>
+    <div class="entry">
+        <table class="entrysection">
+            <tr>
+                <td>Previous Unit:</td>
+                <td><input type="number" id="pro"></td>
+                <td>Current Unit:</td>
+                <td><input type="number" id="qua" value=""></td>
+                
+            </tr>
+            <tr>
+                <td>Running Unit:</td>
+                <td><input type="number" id="total" value="0"></td>
+                <td>Bill:</td>
+                <td><input type="text" id="bill"></td>
+                <!-- <td><input type="text" id="display"></td> -->
+            </tr>
+            <tr class="button">
+                <td><button class="btn btn-outline-primary" onclick="home()">Home</button></td>
+                <td><button class="btn btn-outline-danger" onclick="commercial()">Commercial</button> </td>
+                <td><button class="btn btn-outline-success" onclick="industry()">Indiustry</button>  </td>
+            </tr>
+            <!-- <tr>
+                <td><button class="btn btn-outline-success" onclick="bill()"></button>  </td>
+                <td>Bill:</td> 
+                 <td><input type="text" id="bill"></td>
+            </tr> -->
+            
+        </table>
+    </div>
+    <script>
+         
+
+        function home(){
+            let previous = parseInt(document.getElementById("pro").value)
+            let current = parseInt(document.getElementById("qua").value)
+    
+            let total = previous - current
+            let bill = 0
+    
+            console.log(previous, current, total)
+            document.getElementById("total").value = total
+            if (total <= 100) {
+            bill = "Free"
+            } 
+            else if (total > 100 && total <= 500) {
+            bill = (total - 100) * 2
+            } 
+            else {
+            bill = (400 * 2) + ((total - 500) * 5)
+            }
+             document.getElementById("bill").value=bill
+        }
+
+        function commercial(){
+            let previous=parseInt(document.getElementById("pro").value) 
+            let current=parseInt(document.getElementById("qua").value)
+            
+            let total=previous-current
+            let bill=0
+            console.log(previous,current,total)
+            document.getElementById("total").value=total
+            if(total<=100){
+                bill=2*total
+            }
+            else if(total>100 && total<=500){
+                bill=(100*2)+((total-100)*5)
+            }
+            else {
+                bill=(100*2) + (400*5) + ((total-500)*7)
+            }
+            document.getElementById("bill").value=bill
+        }
+
+        function industry(){
+            let previous=parseInt(document.getElementById("pro").value) 
+            let current=parseInt(document.getElementById("qua").value)
+            
+            let total=previous-current
+            let bill=0
+            console.log(previous,current,total)
+            document.getElementById("total").value=total
+            if(total<=100){
+                bill=5*total
+            }
+            else if(total>100 && total<=500){
+                bill=(100*5)+((total-100)*7)
+            }
+            else {
+                bill=(100*5) + (400*7) +((total-500)*10)
+            }
+            document.getElementById("bill").value=bill
+        }
+        
+    </script>
+</body>
+</html>

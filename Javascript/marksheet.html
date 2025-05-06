@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marksheet</title>
+    <style>
+        body{
+            margin:2%;
+            border: 20px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    
+            <center><h1>Marksheet</h1></center>
+            <table class="marksheet" id="polo">
+        <tr>
+            <td>Name:</td>
+            <td><input type="text" placeholder="" autofocus id="name"></td>
+        </tr>
+        <tr>
+            <td>Registration No:</td>
+            <td><input type="text" id="regno"></td>
+        </tr>
+        <tr>
+            <td>Tamil:</td>
+            <td><input type="text" id="tamil"></td>
+        </tr>
+        <tr>
+            <td>English:</td>
+            <td><input type="text" id="eng"></td>   
+        </tr>
+        <tr>
+            <td>Science:</td>
+            <td><input type="text" id="sci"></td>
+        </tr>
+        <tr>
+            <td>Maths:</td>
+            <td><input type="text" id="mat"></td>
+        </tr>
+        <tr>
+            <td>Social:</td>
+            <td><input type="text" id="soc"></td>
+        </tr>
+        <tr>
+            <td><button class="btn btn-outline-primary" onclick="mark()">Submit</button></td>
+        </tr>
+    </table>
+        
+        
+        <div id="marksheet"></div>
+
+    <script>
+        function mark(){
+            
+            let name=document.getElementById("name").value;
+            let regno=document.getElementById("regno").value;
+
+            let tamil=parseInt(document.getElementById("tamil").value)||0;
+            let english=parseInt(document.getElementById("eng").value)||0;
+            let science=parseInt(document.getElementById("sci").value)||0;
+            let maths=parseInt(document.getElementById("mat").value)||0;
+            let social=parseInt(document.getElementById("soc").value)||0;
+
+            let total= tamil + english + science + maths + social;
+            let percentage= (total/500)*100;
+            let grade = "";
+            
+            if(tamil <40 || english <40 || science <40 || maths <40 || social <40){
+                grade = "F(fail)";
+            }
+            else{
+               
+        if(percentage >=90){
+            grade = "A (Excellent)";
+        }
+        else if(percentage >=80){
+            grade = "B (Very Good)";
+        }
+        else if(percentage >=70){
+            grade = "C (Good)";
+        }
+        else if(percentage >=40){
+            grade = "D (Pass)";
+        }
+        else{
+            grade= "F (Fail)";
+        }
+    
+        }
+
+        
+    
+        
+        // var b=document.getElementById("name").value 
+        
+        // var c=document.getElementById("regno").value 
+        
+        // var d=document.getElementById("tamil").value 
+         
+        // var e=document.getElementById("eng").value 
+        
+        // var ab=document.getElementById("sci").value 
+        
+        // var bc=document.getElementById("mat").value 
+        
+        // var de=document.getElementById("soc").value 
+        // document.getElementById("res").innerHTML= ` <h2>Marksheet Result</h2>
+        //         Name: ${name}<br>
+        //         Registration No: ${regno}<br>
+        //         Tamil: ${tamil}<br>
+        //         English: ${english}<br>
+        //         Science: ${science}<br>
+        //         Maths: ${maths}<br>
+        //         Social: ${social}<br>
+        //         <b>Total: ${total}</b><br>
+        //         <b>Percentage: ${percentage.toFixed(2)}%</b><br>
+        //         <b>Grade: ${grade}</b>`
+
+        document.getElementById("marksheet").innerHTML=  ` <h2>Marksheet Result</h2> Name: ${name}<br>Registration No: ${regno}<br>Tamil: ${tamil}<br>English: ${english}<br>Science: ${science}<br>Maths: ${maths}<br>Social: ${social}<br><b>Total: ${total}</b><br><b>Percentage: ${percentage.toFixed(2)}%</b><br><b>Grade: ${grade}</b>`
+        // document.getElementById("mark").innerHTML=regno
+    }
+
+    </script>
+       
+       <!-- <div id="mark"> </div> -->
+ 
+</body>
+</html>

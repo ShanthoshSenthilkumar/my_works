@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Marksheet</title>
+</head>
+<body>
+    <p id="demp"></p>
+    <script>
+        let tamil=90;
+        let english=100;
+        let maths=39;
+        let total=tamil + english + maths;
+        let percentage= (total/300)*100;
+        let grade="";
+
+        if (tamil < 40 || english < 40 || maths < 40) {
+            grade = "F (Fail)";
+        } 
+
+        else{
+        if(percentage >=90){
+            grade = "A (Excellent)";
+        }
+        else if(percentage >=80){
+            grade = "B (Very Good)";
+        }
+        else if(percentage >=70){
+            grade = "C (Good)";
+        }
+        else if(percentage >=40){
+            grade = "D (Pass)";
+        }
+        else{
+            grade= "F (Fail)";
+        }
+        }
+
+        document.getElementById("demp").innerHTML = `Total marks: ${total}<br> Percentage:${percentage.toFixed(2)}<br> Grade:${grade}`;
+    </script>
+</body>
+</html>

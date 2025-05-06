@@ -1,0 +1,22 @@
+.sample{
+    color:brown;
+    font-family:'Times New Roman', Times, serif;
+    background-color:chartreuse;
+    font-weight: bold;
+}
+form,table,h3{
+       
+    color:rgb(84, 92, 77);
+}
+h1,h2{
+    background-color:rgb(219, 107, 33);
+    color:rgb(75, 78, 10);
+
+}
+*{
+    background-color: rgb(164, 241, 123);
+}
+
+.demo{
+    font-weight: bold;
+}

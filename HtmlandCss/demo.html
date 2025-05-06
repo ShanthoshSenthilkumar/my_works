@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grid{
+            display:grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            column-width:100%;
+                
+      }
+        .demo2{
+            background-color: aqua;
+            grid-column:span 3;  
+            height:100%;
+            width:100% ;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <div class="demo">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Services</li>
+        </ul>
+    </div>
+    <div class="demo2">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad saepe porro, facere nihil, neque maiores, dolore alias amet laborum praesentium voluptas quod aut recusandae corporis officiis? Nulla laborum ut laboriosam.</p>
+    </div>
+</div>
+
+</body>
+</html>

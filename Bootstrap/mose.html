@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Hover Effect</title>
+    <style>
+        .img-fluid {
+            transition: transform 0.3s ease-in-out; /* Smooth transition */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="cat-item">
+        <img class="img-fluid" src="Images/cat-1.jpg" alt="" onmouseover="onmouse(this)" onmouseout="release(this)">
+    </div>
+    <div class="cat-item">
+        <img class="img-fluid" src="Images/cat-2.jpg" alt="" onmouseover="onmouse(this)" onmouseout="release(this)">
+    </div>
+    <div class="cat-item">
+        <img class="img-fluid" src="Images/cat-3.jpg" alt="" onmouseover="onmouse(this)" onmouseout="release(this)">
+    </div>
+    <div class="cat-item">
+        <img class="img-fluid" src="Images/cat-4.jpg" alt="" onmouseover="onmouse(this)" onmouseout="release(this)">
+    </div>
+
+    <script>
+        function onmouse(img) {
+            img.style.transform = "scale(1.2)"; // Enlarge image
+        }
+
+        function release(img) {
+            img.style.transform = "scale(1)"; // Return to normal
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+  <label for="name">Name:</label>
+  <input type="text" id="nameI"><br><br>
+
+  <label for="age">Age:</label>
+  <input type="number" id="ageI"><br><br>
+
+  <label for="job">Job:</label>
+  <input type="text" id="jobI"><br><br>
+
+  <button onclick="addInfo()">Add Info</button><br><br>
+
+  <div id="Info"></div>
+
+  <script>
+    
+
+    function addInfo() {
+      let name = document.getElementById("nameI").value;
+      let age = document.getElementById("ageI").value;
+      let job = document.getElementById("jobI").value;
+
+      let person = {
+        name: name,
+        age: age,
+        job: job
+      };
+
+    }
+
+    function displayInfo() {
+      let infoDiv = document.getElementById("Info");
+      infoDiv.innerHTML = ""; // Clear previous data
+    }
+     
+  </script>
+
+</body>
+</html>

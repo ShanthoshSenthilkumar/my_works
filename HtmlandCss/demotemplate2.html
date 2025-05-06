@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo2</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        
+        /* < Fixed Navbar> */
+        .nav{
+            position:fixed;
+            top:0;
+            left:0;
+            width:100%;
+            display:flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: white;
+            font-weight: bold;
+            padding:10px 20px;
+            z-index:1000;
+        }
+        body{
+            padding-top:60px;
+        }
+        .ul ul{
+            list-style-type:none;
+            display:flex;
+            gap:20px;
+        }
+        .ul ul li{
+            font-size: 18px;
+            padding:10px;
+           
+        }
+        .ul ul li:hover{
+            background-color: rgb(237, 232, 232);
+            color:white;
+            border-radius:5px;
+            padding:10px;
+        }
+        .bar{
+            letter-spacing: 10px;
+        }
+        .image{
+            position: relative;
+        }
+        .text{
+            position:absolute;
+            bottom:30%;
+            left:35%;
+            letter-spacing: 5px;
+            font-size: xx-large;
+        }
+        .wave1{
+            background-color: black;
+            color:white;
+            opacity:0.75;
+            padding:8px 16px;
+        }
+        .wave2{
+            color:white;
+        }
+        .variant, .aboutsection{
+            padding-top: 16px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #ccc;
+            font-size: x-large;
+        }
+        a{
+            text-decoration: none;
+            font-size: 20px;
+            font-style: none;
+            color:black;
+        }
+        .first, .second{
+            display:flex;
+            justify-content: space-around;
+            margin-top: 50px;
+            gap: 25px;
+            margin-left: 25px;
+            margin-right: 25px;
+        }
+
+        .image1{
+            position:relative;
+        }
+        .home{
+            position:absolute;
+            top:0;
+            left:0;
+            background-color: black;
+            color:white;
+            font-size: medium;
+            padding:5px 5px;
+        }
+        .picture{
+            display:flex;
+            justify-content: space-around;
+            margin-left: 25px;
+            margin-left: 25px;
+
+        }
+        .picture1{
+            height:50%;
+            width:50%;
+        }
+        h4{
+            font-weight: bolder;
+            font-size: large;
+        }
+        .grey{
+            
+            opacity:0.60;
+        }
+        .button{
+            display:block;
+            width:95%;
+            color:#000;
+            background: color #b8bbb8;;
+            padding: 8px 128px;
+            align-items:center;
+            border-style: none;
+            font-size: 20px;
+            
+        }
+        .button:hover{
+            background-color: grey;
+        }
+        .opacity{
+            opacity:0.7;
+        }
+        .contact{
+            font-size: larger;
+            font-family: Arial, Helvetica, sans-serif;
+            padding-top: 12px;
+            padding-bottom: 12px;
+        }
+        .border{
+            padding:12px;
+            display:block;
+            margin:10px 0;
+            border: 1px solid #ccc;
+            border-radius:5px;
+            width:100%;
+            height:10%;
+            background-color: white;
+            font-size:16px;
+        }
+        .buttonsection{
+            
+            margin-right: 25px;
+            padding:12px;
+            background-color: #000;
+            color:white;
+            border:none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .buttonsection:hover{
+            background-color: grey;
+        }
+        .map{
+            max-width: 100%;
+            height:auto;
+        }
+        .footer{
+            display:block;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            background-color: #000;
+            color:white;
+            padding-top: 16px;
+            padding-bottom: 16px;
+        }
+
+        /* .overlay{
+            position:relative;
+        } */ 
+        /* .overlay{
+            position: absolute;
+            top:0px;
+            left:0px;
+            z-index: -1;
+            background-color: black;
+            color:white;
+        } */
+        /* img{
+            position:relative;
+        }
+        p{
+            position:absolute;
+            top: 0;
+            left:0;
+        } */
+        /* .contentimage{
+            position:relative;
+        }
+        .house{
+            position: absolute;
+            left:0;
+            top:0;
+        }
+        .summerhouse{
+            color: white;
+            background-color: black;
+        }
+        .owncreation{
+            padding:8px 16px;
+        }
+         */
+    </style>
+</head>
+<body>
+    <!-- Top navbar -->
+     <div class="nav">
+        <div class="bar">
+            <h2><b>BR</b> Architects</h2>
+        </div>
+        <div class="ul">
+            <ul>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href=#about>About</a></li>
+                <li><a href=#contact>Contact</a></li>
+            </ul>
+        </div>
+     </div>
+
+     <!-- Header -->
+      <div class="head">
+        <div class="image">
+            <img class="vision" src="architect.jpg" width="1500" height="800">
+        </div>
+        <div class="text">
+            <h1 class="wave">
+                <span class="wave1">BR</span> 
+                <span class="wave2">Architects</span>
+            </h1>
+        </div>
+      </div>
+
+      <!-- Projects Section -->
+       <div class="section">
+                  <div class="variant" id="projects">
+                           <h3>Projects</h3>
+                   </div>
+       </div>
+
+       <div class="first">
+           <div class="image1">
+                   <img src="summerhouse.jpg" alt="house" height="95%" width="95%">
+                      <div class="home">              
+                                 <h3>Summer House</h3>
+                                </div>
+            </div>
+            <div class="image1">
+                <img src="brickhouse.jpg" alt="house" height="95%" width="95%">
+                   <div class="home">              
+                              <h3>Brick House</h3>
+                             </div>
+            </div>
+            <div class="image1">
+                <img src="barnhouse.jpg" alt="house" height="95%" width="95%">
+                   <div class="home">              
+                              <h3>Barn House</h3>
+                             </div>
+            </div>
+            <div class="image1">
+                <img src="renovated.jpg" alt="house" height="95%" width="95%">
+                   <div class="home">              
+                              <h3>Renovated</h3>
+                             </div>
+            </div>
+        </div>
+        <div class="second">
+            <div class="image1">
+                <img src="summerhouse.jpg" alt="house" height="95%" width="95%">
+                  <div class="home">              
+                     <h3>Summer House</h3>
+                  </div>
+             </div>
+             <div class="image1">
+                 <img src="brickhouse.jpg" alt="house" height="95%" width="95%">
+                    <div class="home">              
+                        <h3>Brick House</h3>
+                    </div>
+             </div>
+             <div class="image1">
+                 <img src="barnhouse.jpg" alt="house" height="95%" width="95%">
+                    <div class="home">              
+                        <h3>Barn House</h3>
+                    </div>
+             </div>
+             <div class="image1">
+                 <img src="renovated.jpg" alt="house" height="95%" width="95%">
+                    <div class="home">              
+                        <h3>Renovated</h3>
+                    </div>
+             </div>
+        </div><br>
+             
+             <!-- About Section -->
+              <div class="about">
+                  <div class="aboutsection" id="about">
+                      <h3>About</h3><hr><br>
+                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi officiis porro sint, corrupti doloremque earum saepe quos molestias iusto natus dolorem soluta reprehenderit sequi voluptatem rerum voluptates sed ad quod. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore sint maiores harum saepe consectetur incidunt distinctio at ipsa natus enim voluptatum doloribus magnam nihil praesentium, quae provident porro.</p>
+                   </div>
+              </div><br>
+              <div class="picture">
+                    <div class="picture1">
+                        <img class="opacity" src="john dee.jpg" alt="John" height="80%" width="95%">
+                        <h4>John Doe</h4><br>
+                        <p class="grey">CEO & Founder</p><br>
+                        <p >Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+                        <button class="button" type="button">Contact</button>
+                    </div>
+                    <div class="picture1">
+                        <img class="opacity" src="john dae.jpg" alt="John" height="80%" width="95%">
+                        <h4>John Doe</h4><br>
+                        <p class="grey">CEO & Founder</p><br>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+                        <button class="button" type="button">Contact</button>
+                    </div>
+                    <div class="picture1">
+                        <img class="opacity"  src="milkrose.jpg" alt="John" height="80%" width="95%">
+                        <h4>Mike Ross</h4><br>
+                        <p class="grey">CEO & Founder</p><br>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+                        <button class="button" type="button">Contact</button>
+                    </div>
+                    <div class="picture1">
+                        <img class="opacity" src="donstar.jpg" alt="John" height="80%" width="95%">
+                        <h4>Dan Star</h4><br>
+                        <p class="grey">CEO & Founder</p><br>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+                        <button class="button" type="button">Contact</button>
+                    </div>
+                </div><br>
+                <!-- Contact section -->
+                <div class="contactform">
+                    <div class="contact" id="contact">
+                        <h3>Contact</h3><br><hr><br>
+                        <p>Lets get in touch and talk about your next project.</p><br>
+                        <form action="" target="blank">
+                            <p>
+                                <input class="border" type="text" placeholder="Name" required name="Name">
+                            </p>
+                            <p>
+                                <input class="border" type="email" placeholder="Email" required name="email">
+                            </p>
+                            <p> 
+                                <input class="border" type="text" placeholder="Subject" required name="text">
+                            </p>
+                            <p>
+                                <input class="border" type="text" placeholder="Comments" required name="text">
+                            </p>
+                            <button class="buttonsection" type="Submit" type="Submit">SEND MESSAGE</button>
+                        </form>
+
+                    </div>
+                    
+                </div><br><br>
+                <div class="map">
+                    <img src="map.jpg" alt="map">
+                </div>
+                <!-- <footer></footer> -->
+                 <div class="footer">
+                    <center><p>Powered By w3.school</p></center>
+                 </div>
+
+                    
+              
+    </body>
+</html>

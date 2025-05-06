@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+  <label for="name">Name:</label>
+  <input type="text" id="nameI"><br><br>
+
+  <label for="age">Age:</label>
+  <input type="number" id="ageI"><br><br>
+
+  <label for="job">Job:</label>
+  <input type="text" id="jobI"><br><br>
+
+  <button onclick="obj()">Display Info</button><br><br>
+  <button onclick="vento()" id="addInfobtn">Add Info</button><br><br>
+
+  <div id="Info"></div>
+
+  <script>
+    let details = {}; // Declare details object globally
+
+    function obj() {
+      let name = document.getElementById("nameI").value;
+      let age = document.getElementById("ageI").value;
+      let job = document.getElementById("jobI").value;
+
+      details = {  // Store values in global object
+        name: name,
+        age: age,
+        job: job
+      };
+      document.getElementById("Info").innerHTML = `Name: ${details.name}<br> Age: ${details.age}<br> Job: ${details.job}`;
+      document.getElementById("addInfobtn").disabled = false;
+    }
+
+    
+
+    function vento() {
+      
+        details.designation = "Captain"; 
+        document.getElementById("Info").innerHTML = `Name: ${details.name}<br>Age: ${details.age}<br>Job: ${details.job}<br>Designation: ${details.designation}`;
+      
+    }
+  </script>
+
+</body>
+</html>

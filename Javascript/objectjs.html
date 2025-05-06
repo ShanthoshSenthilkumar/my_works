@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="optimus"></p>
+
+    <script>
+        //Object --> methods(in built methods)
+        //Object.keys(), Object.values(), Object.entries(), Object.assign()
+        let p={name:"Dhoni", age:30, job:"Cricketer"}
+        console.log(Object.keys(p))// Object.keys()
+
+        console.log(Object.values(p)) // Object.vales()
+
+        console.log(Object.entries(p)) //Object.entries()
+
+        let x={}
+        let prime={designation:"Captain", country:"India"}
+        let update=Object.assign(x,prime,p)  //Object.assign()
+        console.log(update)
+
+        let k=Object.keys(p)
+        // console.log(k)
+        document.getElementById("optimus").innerHTML=k
+
+    </script>
+</body>
+</html>

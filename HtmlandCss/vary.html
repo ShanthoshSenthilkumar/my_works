@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marksheet Demo</title>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Student Marksheet</h2>
+        <input type="number" id="tamil" placeholder="Enter Tamil Marks"><br>
+        <input type="number" id="english" placeholder="Enter English Marks"><br>
+        <input type="number" id="maths" placeholder="Enter Maths Marks"><br>
+        <button onclick="calculateResult()">Show Result</button>
+        <div class="result" id="result"></div>
+    </div>
+
+    <script>
+        function calculateResult() {
+            // Get input values
+            let tamil = parseInt(document.getElementById("tamil").value);
+            let english = parseInt(document.getElementById("english").value);
+            let maths = parseInt(document.getElementById("maths").value);
+
+            // Check for valid input
+            if (isNaN(tamil) || isNaN(english) || isNaN(maths)) {
+                document.getElementById("result").innerHTML = "❌ Please enter valid marks.";
+                return;
+            }
+
+            // Calculate total and percentage
+            let total = tamil + english + maths;
+            let percentage = (total / 300) * 100;
+            let grade = "";
+
+            // Determine grade using if-else conditions
+            if (percentage >= 90) {
+                grade = "A+ (Excellent)";
+            } else if (percentage >= 80) {
+                grade = "A (Very Good)";
+            } else if (percentage >= 70) {
+                grade = "B (Good)";
+            } else if (percentage >= 60) {
+                grade = "C (Average)";
+            } else if (percentage >= 50) {
+                grade = "D (Pass)";
+            } else {
+                grade = "F (Fail)";
+            }
+
+            // Display result
+            document.getElementById("result").innerHTML = 
+                `📜 Total Marks: ${total} <br> 🎓 Grade: ${grade}`;
+        }
+    </script>
+
+</body>
+</html>

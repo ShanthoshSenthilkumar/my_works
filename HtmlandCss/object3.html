@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=label for="operationInput">Operation (add/update/delete):</label>
+   
+
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="operationInput"><br><br>
+
+  <label for="keyInput">Key:</label>
+  <input type="text" id="keyInput"><br><br>
+
+  <label for="valueInput">Value:</label>
+  <input type="text" id="valueInput"><br><br>
+
+  <button onclick="modifyObjectFromInput()">Modify Object</button><br><br>
+
+  <div id="objectDisplay"></div>
+
+  <script>
+    let myObject = {
+      name: "Alice",
+      age: 30,
+      city: "New York"
+    };
+
+    function modifyObject(operation, key, value) {
+      switch (operation) {
+        case "add":
+          myObject[key] = value;
+          break;
+        case "update":
+          if (myObject.hasOwnProperty(key)) {
+            myObject[key] = value;
+          } else {
+            alert(`Key "${key}" does not exist. Cannot update.`);
+          }
+          break;
+        case "delete":
+          if (myObject.hasOwnProperty(key)) {
+            delete myObject[key];
+          } else {
+            alert(`Key "${key}" does not exist. Cannot delete.`);
+          }
+          break;
+        default:
+          alert("Invalid operation. Use 'add', 'update', or 'delete'.");
+      }
+    }
+
+    function modifyObjectFromInput() {
+      const operation = document.getElementById("operationInput").value;
+      const key = document.getElementById("keyInput").value;
+      const value = document.getElementById("valueInput").value;
+
+      modifyObject(operation, key, value);
+
+      // Display the updated object using innerHTML
+      let displayString = "<p>Updated Object:</p><pre>";
+      for (const prop in myObject) {
+        if (myObject.hasOwnProperty(prop)) {
+          displayString += `${prop}: ${myObject[prop]}\n`;
+        }
+      }
+      displayString += "</pre>";
+      document.getElementById("objectDisplay").innerHTML = displayString;
+    }
+  </script>
+</body>
+</html>

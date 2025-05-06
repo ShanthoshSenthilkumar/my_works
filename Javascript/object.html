@@ -1,0 +1,74 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile Manager</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+        .container { padding: 20px; border: 2px solid #333; width: 50%; margin: auto; border-radius: 10px; }
+        button { padding: 10px 15px; font-size: 16px; margin: 10px; cursor: pointer; }
+        input { padding: 8px; margin: 5px; width: 80%; }
+        #profile { margin-top: 20px; padding: 10px; border: 1px solid #555; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>📝 User Profile Manager</h2>
+        <input type="text" id="key" placeholder="Enter Property (e.g., name)">
+        <input type="text" id="value" placeholder="Enter Value (e.g., John)">
+        <button onclick="addOrUpdate()">Add/Update Property</button>
+        <button onclick="deleteProperty()">Delete Property</button>
+        <button onclick="viewProfile()">View Profile</button>
+        <div id="profile"></div>
+    </div>
+
+    <script>
+        // Empty object to store user details
+        let userProfile = {};
+
+        // Function to add or update properties
+        function addOrUpdate() {
+            let key = document.getElementById("key").value;
+            let value = document.getElementById("value").value;
+
+            if (key && value) {
+                userProfile[key] = value; // Add or update the property
+                alert(`✅ Property '${key}' added/updated successfully!`);
+                document.getElementById("key").value = ""; 
+                document.getElementById("value").value = "";
+            } else {
+                alert("❌ Please enter both property name and value!");
+            }
+        }
+
+        // Function to delete a property
+        function deleteProperty() {
+            let key = document.getElementById("key").value;
+            if (userProfile.hasOwnProperty(key)) {
+                delete userProfile[key]; // Delete the property
+                alert(`🗑️ Property '${key}' deleted!`);
+            } else {
+                alert(`❌ Property '${key}' not found!`);
+            }
+            document.getElementById("key").value = "";
+        }
+
+        // Function to display user profile
+        function viewProfile() {
+            let profileDiv = document.getElementById("profile");
+            if (Object.keys(userProfile).length === 0) {
+                profileDiv.innerHTML = "<p>No profile data available.</p>";
+            } else {
+                let output = "<h3>📋 User Profile:</h3>";
+                for (let key in userProfile) {
+                    output += `<strong>${key}:</strong> ${userProfile[key]} <br>`;
+                }
+                profileDiv.innerHTML = output;
+            }
+        }
+    </script>
+
+</body>
+</html> -->

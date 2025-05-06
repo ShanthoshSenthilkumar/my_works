@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" >
+        <input type="text" placeholder="Enter the password" id="polo">
+        <button type="button" onclick="index()">Submit</button>
+    </form>
+    <div id="vento"></div>
+    <script>
+        function index(){
+            var a=document.getElementById("polo").value 
+            var b=/[!@#$%^&*]+/
+            var c="Password must be atlease 8 characters long"
+            if (a.length<8){
+                // alert("Password must be atlease 8 characters long")
+                document.getElementById("vento").innerHTML=c
+            }
+            else if(b.test(a)){
+                // alert("Correct")
+                document.getElementById("vento").innerHTML='Strong Password'
+            }
+            else{
+                // alert("wrong")
+                document.getElementById("vento").innerHTML='Password is not valid'
+            }
+        }
+    </script>
+</body>
+</html>

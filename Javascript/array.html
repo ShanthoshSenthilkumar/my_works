@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>Document</title>
+    <style>
+        body{
+            margin:16px;
+            padding:16px;
+            background-color: rgb(245, 245, 220);
+        }
+        h1{
+            text-align: center;
+            color:rgb(201, 90, 17);
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size:xx-large;
+        }
+        .product, .valueupdate, .newpro, .get{
+            border-style: solid;
+            margin: 4px 4px;
+            padding:4px 4px
+        }
+        .getvalue{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: x-large;
+            color:rgb(201, 90, 17);
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Billing</h1>
+    <table>
+        <tr>
+            <td class="getvalue">Product:</td>
+            <td><input type="text" class="product" id="pro"></td>
+             <td><button class="btn btn-outline-primary" onclick="add()">Add</button></td>
+        </tr>
+        <tr>
+            <td class="getvalue">Value:</td>
+            <td><input type="number" class="valueupdate" id="index"></td>
+            <td class="getvalue">New Product:</td>
+            <td><input type="text" class="newpro" id="rate"></td>
+            <td><button class="btn btn-danger" onclick="update()">Update</button></td>
+        </tr>
+        <tr>
+            <td class="getvalue">Get:</td>
+            <td><input type="number" class="get" id="dis"></td>
+            <td><button class="btn btn-success btn-sm" onclick="deleteItem()">Delete</button></td>
+        </tr>
+    </table>
+    <div id="bill"></div>
+
+    <script>
+        let kylaq=[]
+        function add(){
+            let product=document.getElementById("pro").value
+            kylaq.push(product)
+            document.getElementById("bill").innerHTML=kylaq
+        }
+
+        function update(){
+            let value=document.getElementById("index").value
+            let newproduct=document.getElementById("rate").value
+            value=parseInt(value)
+            kylaq[value]=newproduct
+            document.getElementById("bill").innerHTML=kylaq
+        }
+
+        function deleteItem(){
+            let get1=document.getElementById("dis").value
+            let index=parseInt(get1)
+            console.log(get1,index)
+            kylaq.splice(index,1)
+            document.getElementById("bill").innerHTML=kylaq
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+    <!-- Events- A Javascript event is a specific action that occurs within a web page/application, such as clicking on an element, moving the mose,pressing a key or loading a page. -->
+     <button id="index">Button</button>
+     <button id="demo">Remove</button>
+
+     
+     <script>
+        
+        //Define the callback function
+        function buttonClickHandler(){
+            alert("Button was clicked")
+        }
+
+        //Add event listener for the "index" button
+        let b=document.getElementById("index")
+        b.addEventListener("click",buttonClickHandler)
+
+        //Get the "remove" button
+        let d=document.getElementById("demo")
+
+        //Remove the event listener when "remove" button is clicked
+        d.addEventListener("click", function(){
+            b.removeEventListener("click",buttonClickHandler)
+            alert("Event Listener Removed")
+        })
+
+        // Form Events
+        // onsubmit
+
+     </script>
+</body>
+</html>

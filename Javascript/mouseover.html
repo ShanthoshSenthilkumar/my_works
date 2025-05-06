@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouseover</title>
+</head>
+<body>
+    <img src="a.jpg" alt="" onmouseover="onmouse()" onmouseout="release()" width="100px" height="100px" id="x">
+    <script>
+        function onmouse(){
+            x.style.width="250px" //for zoom in
+            x.style.height="250px"
+        }
+        function release(){
+            x.style.width="100px" //zoom out
+            x.style.height="100px"
+        }
+    </script>
+</body>
+</html>

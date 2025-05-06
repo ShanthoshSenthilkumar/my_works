@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex</title>
+</head>
+<style>
+    .logo{
+        width:100%;
+        height:50px;
+    }
+    .head{
+        width:60%;
+        height:10vh;
+        background-color:rgb(166, 122, 207);
+        float:left;
+    }
+    .main{
+        width:40%;
+        height:10vh;
+        background-color: cadetblue;
+        float:right;
+    }
+    ul{
+        display:flex;
+        justify-content: space-around;
+    }
+    li{
+        list-style-type:none;
+    }
+    h1{
+        margin-left: 50px;
+    }
+    .opac img{
+        opacity:0.4;
+    }
+    .opac{
+        position:relative;
+        
+    }
+    .text{
+        position:absolute;
+        bottom:50px;
+        left:10px;
+        font-weight: bold;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: x-large;
+    }
+   .imge{
+    overflow:auto;
+   }
+   .lexus{
+    float:right;
+   }
+</style>
+
+<body>
+   <div class="logo">
+      <div class="head">
+         <h1>New Car Zone</h1>
+      </div>
+      <div>
+          <div class="main">
+             <ul>
+                  <li>Home</li>
+                  <li>About</li>
+                  <li>Services</li>
+                   <li>FAQ's</li>
+              </ul>
+           </div>
+      </div>
+      <div class="opac">
+                <img src="Vintage.jpg" alt="car" style="width: 100%; height:500px;">
+              <div class="text">
+                 <p>Here is your Dream Car</p>
+              </div>
+      </div>
+      <div class="imge">
+        <img class="lexus" src="Lexus.jpg" alt="lexus image" width="170" height="170">
+        Experience luxury and reliability with this **pre-owned Lexus**, owned by a **single owner** and maintained in **excellent condition. This vehicle offers a smooth drive, premium features, and top-tier comfort**, making it a perfect choice for those who appreciate elegance and performance.  
+   </div>
+</body>
+</html>

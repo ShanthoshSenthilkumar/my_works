@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+  <label for="name">Name:</label>
+  <input type="text" id="nameI"><br><br>
+
+  <label for="age">Age:</label>
+  <input type="number" id="ageI"><br><br>
+
+  <label for="job">Job:</label>
+  <input type="text" id="jobI"><br><br>
+
+  <button onclick="obj()">Display Info</button><br><br>
+  <button onclick="vento()" id="addInfobtn" disabled>Add Info</button><br><br>
+
+  <!-- Update Section -->
+  <label for="updateKey">Property to Update:</label>
+  <input type="text" id="updateKey" placeholder="e.g., job"><br><br>
+
+  <label for="updateValue">New Value:</label>
+  <input type="text" id="updateValue" placeholder="Enter new value"><br><br>
+
+  <button onclick="updateProperty()">Update Property</button><br><br>
+
+  <div id="Info"></div>
+
+  <script>
+    let details = {}; // Declare details object globally
+
+    // Function to display initial user info
+    function obj() {
+      let name = document.getElementById("nameI").value;
+      let age = document.getElementById("ageI").value;
+      let job = document.getElementById("jobI").value;
+
+      details = {  
+        name: name,
+        age: age,
+        job: job
+      };
+
+      displayInfo();
+      document.getElementById("addInfobtn").disabled = false;
+    }
+
+    // Function to add new property (Designation)
+    function vento() {
+      details.designation = "Captain"; 
+      displayInfo();
+    }
+
+    // Function to update a property dynamically
+    function updateProperty() {
+      let key = document.getElementById("updateKey").value;
+      let value = document.getElementById("updateValue").value;
+
+      if (key in details) {  // Check if the key exists in the object
+        details[key] = value;
+        displayInfo();
+        alert(`✅ '${key}' has been updated to '${value}'`);
+      } else {
+        alert(`❌ Property '${key}' does not exist!`);
+      }
+
+      document.getElementById("updateKey").value = "";
+      document.getElementById("updateValue").value = "";
+    }
+
+    // Function to display updated user info
+    function displayInfo() {
+      let infoHTML = "";
+      for (let key in details) {
+        infoHTML += `<strong>${key}:</strong> ${details[key]}<br>`;
+      }
+      document.getElementById("Info").innerHTML = infoHTML;
+    }
+
+  </script>
+
+</body>
+</html>

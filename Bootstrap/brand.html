@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/js/bootstrap.bundle.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <title>Document</title>
+</head>
+<style>
+    .navbar{
+        background-color: #f4511e;
+        letter-spacing: 4px;
+        word-spacing: 2px;
+    }
+    .vento{
+      color:white;
+    }
+    .first{
+      background-color: #f4511e;
+      color:white;
+      letter-spacing: 3px;
+      padding:100px 25px;
+      align-items: center;
+    }
+    .input-group{
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+    .polo{
+      border: 0;
+    }
+    .kylaq ul li:hover{
+      background-color:#d84315;
+    }
+    .button{
+      padding:10px 16px;
+      font-size: 18px;
+      border-color: black;
+      color:black;
+    }
+    .bar, .globe{
+      color:#f4511e;
+      font-size: 200px;
+      position:relative;
+      font-weight: 400px;
+    }
+    .container-fluid{
+      padding:60px 50px;
+    }
+    .row{
+      margin-left: -15px;
+      margin-left: -15px;
+    }
+    h3{
+      font-weight:400;
+      font-size: 19px;
+    }
+    h4{
+      font-weight: 400;
+      font-size: 19px;
+      margin-bottom: 30px;
+    }
+    .power, .love, .hard, .green, .jobdone, .certified{
+      font-size: 50px;
+      color:#f4511e;
+      margin-bottom: 20px;
+    }
+    .thumbnail{
+      padding:0 0 15px 0;
+      border:none;
+      border-radius:0;
+    }
+    .panel {
+  border: 1px solid #f4511e;
+  border-radius:0;
+  transition: box-shadow 0.5s;
+}
+
+.panel:hover {
+  box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+}
+
+.panel-footer .btn:hover {
+  border: 1px solid #f4511e;
+  background-color: #fff !important;
+  color: #f4511e;
+}
+
+.panel-heading {
+  color: #fff !important;
+  background-color: #f4511e !important;
+  padding: 25px;
+  border-bottom: 1px solid transparent;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.panel-footer {
+  background-color: #fff !important;
+}
+
+.panel-footer h3 {
+  font-size: 32px;
+}
+
+.panel-footer h4 {
+  color: #aaa;
+  font-size: 14px;
+}
+
+.panel-footer .btn {
+  margin: 15px 0;
+  background-color: #f4511e;
+  color: #fff;
+}
+    /* p{
+      margin:0 0 10px;
+    } */
+    
+    
+</style>
+<body>
+  <!-- <Fixed navbar></Fixed> -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container vento">
+      <a class="navbar-brand text-light" href="#">Logo</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse kylaq" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active text-light " aria-current="page" href="#About">ABOUT</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light go2" href="#services">SERVICES</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light rox" href="#portfolio">PORTFOLIO</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light xuv" href="#price">PRICING</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light suv" href="#contact">CONTACT</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav><br><br>
+  <!-- <brand name></brand> -->
+  <div class="top first">
+        <div class="container">
+            <center><h1 class="mytext">ORANGE FABRICS</h1></center><br>
+            <center><small class="text-body-light"><em>Innovating Textures, Inspiring Trends</em></small></center><br>
+            <div class="input-group justify-content-center">
+                <form class="d-flex form1 w-50" role="email">
+                  <input class="form-control polo" type="email" placeholder="Email Address" sie="50">
+                  <button class="btn btn-danger" type="subscribe">Subscribe</button>
+              </form>
+          </div>
+      </div>
+  </div><br><br><br><br>
+
+  <!-- About Section -->
+    <div class="container-fluid" id="About">
+            <div class="row">
+               <div class="col-sm-8">
+                  <h2>ABOUT</h2><br><br>
+                  <h5>At Orange Fabrics, we don't just sell fabrics—we weave dreams into reality. Our brand is built on a deep passion for textiles, offering a handpicked collection of premium fabrics that cater to fashion designers, artisans, and home décor enthusiasts alike. Whether you're looking for timeless classics or the latest trends, we provide materials that inspire creativity and elevate craftsmanship.</h5><br><br>
+                  <p class="text-justify">Our journey began with a simple idea: to transform the way people experience fabrics. Every bolt in our collection is carefully sourced from renowned mills and innovative designers who share our commitment to excellence and sustainability. We take pride in blending traditional techniques with contemporary design trends, ensuring that each piece tells its own unique story.With a focus on innovation and personalized service, Fabric Haven is more than just a fabric supplier; it's a creative community. Whether you're working on a couture masterpiece, a home decor project, or a DIY venture, our fabrics are designed to inspire and empower your creativity. Discover the art of fabric with us—where every thread weaves a dream, and every design begins with a spark of inspiration.</p><br><br>
+                  <button type="button" class="btn button btn-light">Get in touch</button>
+               </div>
+                <div class="col-sm-4">
+                    <div class="bar signal">
+                    <i class="bi bi-bar-chart-fill"></i>
+                  </div>
+               </div>
+           </div>
+    </div><br><br>
+        <div class="container-fluid bg-secondary-subtle">
+            <div class="row">
+                <div class="col-sm-4">
+                   <div class="globe">
+                      <i class="fa-solid fa-earth-americas"></i>
+                   </div>
+                </div>
+                <div class="col-sm-8">
+                    <h2>OUR VALUES</h2><br><br>
+                    <h3><strong>MISSION:</strong>At Orange Fabrics, our mission is to empower designers, artisans, and fabric lovers with premium-quality textiles that inspire creativity. We aim to make every design dream a reality by offering a diverse range of luxurious and sustainable fabrics, backed by exceptional service and expertise.
+                    </h3><br><br><br>
+                    <p><strong>VISION:</strong>To be the most trusted and innovative fabric brand, known for our high-quality textiles, trendsetting designs, and commitment to sustainability. We envision a world where creativity has no limits, and every fabric tells a unique story of artistry and craftsmanship.</p>
+                     
+                </div>
+            </div>
+        </div><br><br><br>
+
+        <!-- Service Section -->
+         <div class="container-fluid text-center" id="services">
+            <h2>SERVICES</h2>
+            <h4>What we offer</h4><br>
+             <div class="row">
+                  <div class="col-sm-4">
+                    <!-- <div class="power"> -->
+                        <i class="fa-solid fa-power-off power"></i>
+                        <h4>POWER</h4>
+                        <p>High-quality, durable fabrics designed to withstand the test of time.</p>
+                    <!-- </div> -->
+                  </div>
+                  <div class="col-sm-4">
+                      <!-- <div class="love"> -->
+                        <i class="fa-solid fa-heart love"></i>
+                        <h4>LOVE</h4>
+                        <p>Crafted with passion and care to bring comfort and elegance.</p>
+                      <!-- </div> -->
+                  </div>
+                  <div class="col-sm-4">
+                    <!-- <div class="jobdone"> -->
+                      <i class="fa-solid fa-suitcase jobdone"></i>
+                      <h4>JOB DONE</h4>
+                      <p>Reliable textile solutions that meet your every need with precision.</p>
+                    <!-- </div> -->
+                  </div>
+             </div><br><br>
+             <div class="row">
+                <div class="col-sm-4">
+                    <!-- <div class="green"> -->
+                      <i class="fa-solid fa-leaf green"></i>
+                      <h4>GREEN</h4>
+                      <p>Eco-friendly and sustainable fabrics for a better tomorrow.</p>
+                    <!-- </div> -->
+                </div>
+                <div class="col-sm-4">
+                    <!-- <div class="certified"> -->
+                      <i class="fa-solid fa-certificate certified"></i>
+                      <h4>CERTIFIED</h4>
+                      <p>Premium materials sourced responsibly and ethically approved.</p>
+                    <!-- </div> -->
+                </div>
+                <div class="col-sm-4">
+                    <!-- <div class="hard"> -->
+                      <i class="fa-solid fa-wrench hard"></i>
+                      <h4>HARD WORK</h4>
+                      <p>Meticulously designed and crafted to ensure excellence in every thread.</p>
+                    <!-- </div> -->
+                </div>
+             </div>
+         </div><br><br>
+
+         <!-- PORTFOLIO SECTION -->
+         <div class="container-fluid text-center bg-secondary-subtle" id="portfolio">
+              <h2>PORTFOLIO</h2><br>
+              <h3>What we have created</h3><br><br>
+              <div class="row">
+                  <div class="col-sm-4">
+                    <div class="card">
+                    <div class="thumbnail">
+                      <img src="Images/orangefashion.jpg" alt="fashion" width="100%" height="300">
+                      <p><strong>Luxe Weaves Collection</strong></p>
+                      <p>Elegant fabrics for fashion and luxury interiors</p>
+                    </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="card">
+                    <div class="thumbnail">
+                        <img src="Images/weave2.jpg" alt="weaving" width="100%" height="300">
+                        <p><strong>Eco-Friendly Textures</strong></p>
+                        <p>Sustainable and organic fabrics designed for a greener future</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="card">
+                    <div class="thumbnail">
+                        <img src="Images/colorful-ribbon.jpg" alt="dress" width="100%" height="300">
+                        <p><strong> Everyday Comfort Line</strong></p>
+                        <p>Soft, breathable textiles perfect for daily wear and cozy living</p>
+                      </div>
+                    </div>
+                  </div>
+              </div><br><br>
+              <div class="container-fluid text-center">
+                  <h2>WHAT OUR CUSTOMER SAY</h2><br><br><br>
+                  <!-- carousel -->
+                  <div class="container">
+                    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                      <div class="carousel-inner">
+                        <div class="carousel-item active" data-bs-interval="10000">
+                          <h4>"Fabric Haven offers the finest quality fabrics! The textures and colors are exactly what I needed for my boutique collection."</h4>
+                          <span>Sophia R CEO Cotton mills</span>
+                        </div>
+                        <div class="carousel-item" data-bs-interval="2000">
+                          <h4>"Absolutely love their selection! The fabrics are soft, durable, and perfect for my home decor projects."</h4>
+                          <span>Daniel M Chairperson KS Groups</span>
+                        </div>
+                        <div class="carousel-item">
+                          <h4>Sustainable, stylish, and luxurious! Fabric Haven has it all! I keep coming back for more.</h4>
+                          <span>Liam M Tiruppur Groups </span>
+                        </div>
+                      </div>
+                      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                      </button>
+                      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                      </button>
+                    </div>
+         </div><br><br>
+         <!-- Pricing Section -->
+         <div class="container-fluid bg-light" id="price">
+          <div class="text-center">
+            <h2>Pricing</h2>
+            <h4>Choose a payment plan that works for you</h4>
+          </div>
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="panel panel-default text-center">
+                <div class="panel-heading">
+                  <h1>Basic</h1>
+                </div>
+                <div class="panel-body">
+                  <p><strong>20</strong> Lorem</p>
+                  <p><strong>15</strong> Ipsum</p>
+                  <p><strong>5</strong> Dolor</p>
+                  <p><strong>2</strong> Sit</p>
+                  <p><strong>Endless</strong> Amet</p>
+                </div>
+                <div class="panel-footer">
+                  <h3>$19</h3>
+                  <h4>per month</h4>
+                  <button class="btn btn-lg" onclick="add()">Sign Up</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="panel panel-default text-center">
+                <div class="panel-heading">
+                  <h1>Pro</h1>
+                </div>
+                <div class="panel-body">
+                  <p><strong>50</strong> Lorem</p>
+                  <p><strong>25</strong> Ipsum</p>
+                  <p><strong>10</strong> Dolor</p>
+                  <p><strong>5</strong> Sit</p>
+                  <p><strong>Endless</strong> Amet</p>
+                </div>
+                <div class="panel-footer">
+                  <h3>$29</h3>
+                  <h4>per month</h4>
+                  <button class="btn btn-lg">Sign Up</button>
+                </div>
+              </div>
+            </div>
+           <div class="col-sm-4">
+              <div class="panel panel-default text-center">
+                <div class="panel-heading">
+                  <h1>Premium</h1>
+                </div>
+                <div class="panel-body">
+                  <p><strong>100</strong> Lorem</p>
+                  <p><strong>50</strong> Ipsum</p>
+                  <p><strong>25</strong> Dolor</p>
+                  <p><strong>10</strong> Sit</p>
+                  <p><strong>Endless</strong> Amet</p>
+                </div>
+                <div class="panel-footer">
+                  <h3>$49</h3>
+                  <h4>per month</h4>
+                  <button class="btn btn-lg"><a href="array2.html">Sign Up</a></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+</body>
+</html>

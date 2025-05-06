@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Marksheet</title>
+    <style>
+        .sty {
+            padding: 60px;
+        }
+
+        #eng {
+            height: 40px;
+            width: 400px;
+        }
+
+        #tam {
+            height: 40px;
+            width: 400px;
+        }
+
+        #mat {
+            height: 40px;
+            width: 400px;
+        }
+
+        #sci {
+            height: 40px;
+            width: 400px;
+        }
+
+        #ss {
+            height: 40px;
+            width: 400px;
+        }
+
+        #but {
+            height: 40px;
+            width: 60px;
+        }
+
+        #result {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: x-large;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <center>
+        <div class="sty">
+            <input type="text" id="tam" placeholder="தமிழ்"> <br> <br>
+            <input type="text" id="eng" placeholder="ENGLISH"> <br> <br>
+            <input type="text" id="mat" placeholder="MATHS"> <br> <br>
+            <input type="text" id="sci" placeholder="SCIENCE"> <br><br>
+            <input type="text" id="ss" placeholder="SOCIAL SCIENCE"> <br> <br> -->
+            <!-- <button onclick="marks()" id="but"> Submit</button> -->
+<!-- 
+        </div>
+
+    </center> -->
+
+    <div id="result">
+
+    </div>
+
+
+</body>
+<script>
+    // function marks() {
+        // var tamil = document.getElementById("tam").value
+        // var english = document.getElementById("eng").value
+        // var maths = document.getElementById("mat").value
+        // var science = document.getElementById("sci").value
+        // var social = document.getElementById("ss").value
+        // var total = parseInt(tamil) + parseInt(english) + parseInt(maths) + parseInt(science) + parseInt(social);
+        // var average = parseInt(total) / 5;
+        // var grade = ""
+
+var tamil =100
+var english=80
+var maths =70
+var science =85
+var social =60
+var total = parseInt(tamil) + parseInt(english) + parseInt(maths) + parseInt(science) + parseInt(social);
+var average = parseInt(total) / 5;
+var grade=""
+
+if (tamil < 40 || english < 40 || maths < 40 || science < 40 || social < 40) { grade = "F(fail)"; }
+        else {
+
+            if (average >=100) { grade = "D(do well)"; }
+            else if (average >=80) { grade = "C(improve)"; }
+            else if (average >= 70) { grade = "B(consentrate more)"; }
+            else if (average >= 60) { grade = "A(good)"; }
+            else if (average >= 50) { grade = "A(very good)"; }
+            else if (average >= 40) { grade = "E(excellent)"; }
+            else { grade = "F(fail)"; }
+        }
+    alert(`TAMIL:${tamil} ENGLISH:${english} MATHS:${maths} SCIENCE:${science} SOCIAL:${social} TOTAL:${total} AVERAGE:${average} GRADE:${grade}`)
+// document.getElementById("result").innerHTML=`TAMIL:${tamil} <br>ENGLISH:${english} <br>MATHS:${maths}<br>SCIENCE:${science}<br>SOCIAL:${social}<br>TOTAL:${total}<br>AVERAGE:${average}<br>GRADE:${grade}`
+// document.getElementById("result").innerHTML=english
+// document.getElementById("result").innerHTML=maths
+// document.getElementById("result").innerHTML=science
+// document.getElementById("result").innerHTML=social
+
+
+
+
+
+
+        // if (tamil < 40 || english < 40 || maths < 40 || science < 40 || social < 40) { grade = "F(fail)"; }
+        // else {
+
+        //     if (average >= 50) { grade = "D(do well)"; }
+        //     else if (average >= 65) { grade = "C(improve)"; }
+        //     else if (average >= 75) { grade = "B(consentrate more)"; }
+        //     else if (average >= 85) { grade = "A(good)"; }
+        //     else if (average >= 95) { grade = "A(very good)"; }
+        //     else if (average >= 100) { grade = "E(excellent)"; }
+        //     else { grade = "F(fail)"; }
+        // }
+
+
+
+        // document.getElementById("result").innerHTML = `Tamil:${tamil} <br>
+        //                                     English:${english} <br>
+        //                                     Maths:${maths} <br>
+        //                                     science:${science} <br>
+        //                                     Social:${social} <br>
+        //                                     Total:${total} <br>
+        //                                     Averge:${average} % <br>
+        //                                     Grade:${grade}
+        //                                     `
+
+    // }
+
+
+
+
+
+
+
+
+
+</script>
+
+</html>
